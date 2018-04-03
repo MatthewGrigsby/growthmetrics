@@ -4,15 +4,19 @@
 \alias{amse}
 \title{aMSE}
 \usage{
-amse(observed = "height", id.var = "id", predicted = "pred",
-  time.var = "time", data)
+amse(observed = "height", predicted = "pred", id.var = "id",
+  time.var = "time", breaks = c(6, 12, 18, 24), data)
 }
 \arguments{
-\item{method2order}{method to order colors (\code{"hsv"} or \code{"cluster"})}
+\item{observed}{observed growth values (e.g. height or weight)}
 
-\item{cex}{character expansion for the text}
+\item{predicted}{predicted values from models fitted to observed data}
 
-\item{mar}{margin paramaters; vector of length 4 (see \code{\link[graphics]{par}})}
+\item{id.var}{variable that identifies individual subjects}
+
+\item{time.var}{time variable (e.g. age) used when calculating nMSE and wMSE}
+
+\item{breaks}{vector indicating location of age cutoffs for calculating MSE per group}
 }
 \value{
 None

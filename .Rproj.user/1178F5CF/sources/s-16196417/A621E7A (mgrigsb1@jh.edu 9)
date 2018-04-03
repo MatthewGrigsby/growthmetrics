@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1522797057250.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1320927165",
+    "id" : "A621E7A",
+    "lastKnownWriteTime" : 1522798632,
+    "last_content_update" : 1522798819374,
+    "path" : "~/Box Sync/git projects/growthmetrics/R/amse.R",
+    "project_path" : "R/amse.R",
+    "properties" : {
+        "cursorPosition" : "8,32",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
