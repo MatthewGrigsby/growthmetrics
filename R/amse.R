@@ -5,10 +5,10 @@
 #' @param observed observed growth values (e.g. height or weight)
 #' @param predicted predicted values from models fitted to observed data
 #' @param id.var variable that identifies individual subjects
-#' @param time.var time variable (e.g. age) used when calculating nMSE and wMSE
-#' @param breaks vector indicating location of age cutoffs for calculating MSE per group
+#' @param time.var time variable (e.g. age) used when calculating nMSE and wMSE (default is in months)
+#' @param breaks vector indicating location of age cutoffs for calculating MSE per group (default is in months)
 #'
-#'
+#' @return None
 #'
 #' @import dplyr reshape
 #'
