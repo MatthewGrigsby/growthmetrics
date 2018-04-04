@@ -4,8 +4,8 @@
 \alias{amse}
 \title{aMSE}
 \usage{
-amse(observed = "height", predicted = "pred", id.var = "id",
-  time.var = "time", breaks = c(6, 12, 18, 24), data)
+amse(observed = "observed", predicted = "pred", id.var = "id",
+  time.var = "time", breaks = c(0, 6, 12, 18, 24), data)
 }
 \arguments{
 \item{observed}{observed growth values (e.g. height or weight)}
