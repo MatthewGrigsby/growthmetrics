@@ -4,19 +4,21 @@
 \alias{mse}
 \title{MSE}
 \usage{
-mse(observed = "observed", id.var = "id", predicted = "pred",
-  time.var = "time", data)
+mse(observed = "observed", predicted = "pred", id.var = "id", data)
 }
 \arguments{
 \item{observed}{observed growth values (e.g. height or weight)}
 
-\item{id.var}{variable that identifies individual subjects}
-
 \item{predicted}{predicted values from models fitted to observed data}
+
+\item{id.var}{variable that identifies individual subjects}
 }
 \value{
-None
+data.frame with id and subject-specific MSE estimates
 }
 \description{
 Function for calculating subject-specific mean squared error
+}
+\references{
+Grigsby MR, Di J, Leroux A, Zipunnikov V, Xiao L, Crainiceanu C, Checkley W. Novel metrics for growth model selection. Emerging themes in epidemiology. 2018 Dec;15(1):4.
 }

@@ -4,23 +4,26 @@
 \alias{wmse}
 \title{wMSE}
 \usage{
-wmse(id.var = "id", time.var = "time", weight.var = "weights",
-  type = "mse", data)
+wmse(observed = "observed", predicted = "pred", id.var = "id",
+  weight.var = "weights", type = "nmse", data)
 }
 \arguments{
-\item{id.var}{variable that identifies individual subjects}
-
-\item{time.var}{time variable (e.g. age) used when calculating nMSE and wMSE}
-
-\item{weight.var}{Variable used to weight MSE or nMSE. This should be a vector of values that will be used to divide subject-specific MSE estimates by. An example could be using subject-specific growth trajectories (i.e. weighting individuals with slowest growth).}
-
 \item{observed}{observed growth values (e.g. height or weight)}
 
 \item{predicted}{predicted values from models fitted to observed data}
+
+\item{id.var}{variable that identifies individual subjects}
+
+\item{weight.var}{Variable used to weight MSE or nMSE. This should be a vector of values that will be used to divide subject-specific MSE estimates by. An example could be using subject-specific growth trajectories (i.e. weighting individuals with slowest growth).}
+
+\item{type}{Type of MSE estimate used as denominator. Default is nMSE but can be se to standard MSE.}
 }
 \value{
-None
+data.frame with id and subject-specific weighted MSE or nMSE estimates
 }
 \description{
 Function for weighting MSE, nMSE, or aMSE by the specified variable for weights.
+}
+\references{
+Grigsby MR, Di J, Leroux A, Zipunnikov V, Xiao L, Crainiceanu C, Checkley W. Novel metrics for growth model selection. Emerging themes in epidemiology. 2018 Dec;15(1):4.
 }

@@ -6,25 +6,28 @@
 #' @param observed observed growth values (e.g. height or weight)
 #' @param predicted predicted values from models fitted to observed data
 #' @param id.var variable that identifies individual subjects
-#' @param time.var time variable (e.g. age) used when calculating nMSE and wMSE
 #' @param weight.var Variable used to weight MSE or nMSE. This should be a vector of values that will be used to divide subject-specific MSE estimates by. An example could be using subject-specific growth trajectories (i.e. weighting individuals with slowest growth).
+#' @param type Type of MSE estimate used as denominator. Default is nMSE but can be se to standard MSE.
 #'
-#' @return None
+#' @return data.frame with id and subject-specific weighted MSE or nMSE estimates
+#'
+#' @references Grigsby MR, Di J, Leroux A, Zipunnikov V, Xiao L, Crainiceanu C, Checkley W. Novel metrics for growth model selection. Emerging themes in epidemiology. 2018 Dec;15(1):4.
 #'
 #' @export
-wmse = function (id.var="id", time.var="time", weight.var="weights", type="mse", data){
-
-  id<-unique(data[[id.var]])
-  data$t<-data[[time]]
+wmse = function (observed="observed", predicted="pred", id.var="id", weight.var="weights", type="nmse", data){
 
   count=0
   wmse.list<-NULL
 
-  for (k in id){
+  for (k in unique(data[[id.var]])){
     count=count+1
     current.mat=subset(data,id==k)
-    if (type==mse){a = current.mat[[true]]/current.mat[[weight.var]]}
-    if (type==nmse){a = current.mat[[true]]/current.mat[[weight.var]]}
+    if (type=="nmse"){
+      a = ((current.mat[[observed]] - current.mat[[predicted]])^2 /(current.mat[[observed]])^2)/current.mat[[weight.var]]
+      }
+    if (type=="mse"){
+      a = ((current.mat[[observed]]-current.mat[[predicted]])^2) /current.mat[[weight.var]]
+      }
     wmse = mean(a)
     wmse.list[count]=wmse
   }

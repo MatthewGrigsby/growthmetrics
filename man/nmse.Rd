@@ -4,21 +4,21 @@
 \alias{nmse}
 \title{nMSE}
 \usage{
-nmse(observed = "height", id.var = "id", predicted = "pred",
-  time.var = "time", data)
+nmse(observed = "observed", predicted = "pred", id.var = "id", data)
 }
 \arguments{
 \item{observed}{observed growth values (e.g. height or weight)}
 
-\item{id.var}{variable that identifies individual subjects}
-
 \item{predicted}{predicted values from models fitted to observed data}
 
-\item{time.var}{time variable (e.g. age) used when calculating nMSE and wMSE}
+\item{id.var}{variable that identifies individual subjects}
 }
 \value{
-None
+data.frame with id and subject-specific location-normalized MSE estimates
 }
 \description{
 Function for calculating subject-specific location-normalized mean squared error
+}
+\references{
+Grigsby MR, Di J, Leroux A, Zipunnikov V, Xiao L, Crainiceanu C, Checkley W. Novel metrics for growth model selection. Emerging themes in epidemiology. 2018 Dec;15(1):4.
 }

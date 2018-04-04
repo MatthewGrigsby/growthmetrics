@@ -6,10 +6,12 @@
 #' @param predicted predicted values from models fitted to observed data
 #' @param id.var variable that identifies individual subjects
 #'
-#' @return None
+#' @return data.frame with id and subject-specific MSE estimates
+#'
+#' @references Grigsby MR, Di J, Leroux A, Zipunnikov V, Xiao L, Crainiceanu C, Checkley W. Novel metrics for growth model selection. Emerging themes in epidemiology. 2018 Dec;15(1):4.
 #'
 #' @export
-mse = function (observed="observed", id.var="id", predicted="pred", time.var="time", data){
+mse = function (observed="observed", predicted="pred", id.var="id", data){
 
   id<-unique(data[[id.var]])
   data$t<-data[[time.var]]
