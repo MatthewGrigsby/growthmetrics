@@ -8,7 +8,7 @@
 #'
 #' @return data.frame with id and subject-specific MSE estimates
 #'
-#' @references Grigsby MR, Di J, Leroux A, Zipunnikov V, Xiao L, Crainiceanu C, Checkley W. Novel metrics for growth model selection. Emerging themes in epidemiology. 2018 Dec;15(1):4.
+#' @references Grigsby MR, Di J, Leroux A, Zipunnikov V, Xiao L, Crainiceanu C, Checkley W. Novel metrics for growth model selection. Emerging themes in epidemiology. 2018 Feb;15(1):4.
 #'
 #' @export
 mse = function (observed="observed", predicted="pred", id.var="id", data){

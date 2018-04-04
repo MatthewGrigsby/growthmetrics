@@ -12,7 +12,7 @@
 #'
 #' @import dplyr reshape
 #'
-#' @references Grigsby MR, Di J, Leroux A, Zipunnikov V, Xiao L, Crainiceanu C, Checkley W. Novel metrics for growth model selection. Emerging themes in epidemiology. 2018 Dec;15(1):4.
+#' @references Grigsby MR, Di J, Leroux A, Zipunnikov V, Xiao L, Crainiceanu C, Checkley W. Novel metrics for growth model selection. Emerging themes in epidemiology. 2018 Feb;15(1):4.
 #'
 #'
 #' @export

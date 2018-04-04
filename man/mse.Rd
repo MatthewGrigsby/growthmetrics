@@ -20,5 +20,5 @@ data.frame with id and subject-specific MSE estimates
 Function for calculating subject-specific mean squared error
 }
 \references{
-Grigsby MR, Di J, Leroux A, Zipunnikov V, Xiao L, Crainiceanu C, Checkley W. Novel metrics for growth model selection. Emerging themes in epidemiology. 2018 Dec;15(1):4.
+Grigsby MR, Di J, Leroux A, Zipunnikov V, Xiao L, Crainiceanu C, Checkley W. Novel metrics for growth model selection. Emerging themes in epidemiology. 2018 Feb;15(1):4.
 }
