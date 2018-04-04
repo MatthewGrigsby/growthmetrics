@@ -2,9 +2,12 @@
 #'
 #' Function for weighting MSE, nMSE, or aMSE by the specified variable for weights.
 #'
-#' @param method2order method to order colors (\code{"hsv"} or \code{"cluster"})
-#' @param cex character expansion for the text
-#' @param mar margin paramaters; vector of length 4 (see \code{\link[graphics]{par}})
+#'
+#' @param observed observed growth values (e.g. height or weight)
+#' @param predicted predicted values from models fitted to observed data
+#' @param id.var variable that identifies individual subjects
+#' @param time.var time variable (e.g. age) used when calculating nMSE and wMSE
+#' @param weight.var Variable used to weight MSE or nMSE. This should be a vector of values that will be used to divide subject-specific MSE estimates by. An example could be using subject-specific growth trajectories (i.e. weighting individuals with slowest growth).
 #'
 #' @return None
 #'
@@ -22,7 +25,6 @@ wmse = function (id.var="id", time.var="time", weight.var="weights", type="mse",
     current.mat=subset(data,id==k)
     if (type==mse){a = current.mat[[true]]/current.mat[[weight.var]]}
     if (type==nmse){a = current.mat[[true]]/current.mat[[weight.var]]}
-    if (type==wmse){a = current.mat[[true]]/current.mat[[weight.var]]}
     wmse = mean(a)
     wmse.list[count]=wmse
   }

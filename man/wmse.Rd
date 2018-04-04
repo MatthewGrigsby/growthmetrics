@@ -8,11 +8,15 @@ wmse(id.var = "id", time.var = "time", weight.var = "weights",
   type = "mse", data)
 }
 \arguments{
-\item{method2order}{method to order colors (\code{"hsv"} or \code{"cluster"})}
+\item{id.var}{variable that identifies individual subjects}
 
-\item{cex}{character expansion for the text}
+\item{time.var}{time variable (e.g. age) used when calculating nMSE and wMSE}
 
-\item{mar}{margin paramaters; vector of length 4 (see \code{\link[graphics]{par}})}
+\item{weight.var}{Variable used to weight MSE or nMSE. This should be a vector of values that will be used to divide subject-specific MSE estimates by. An example could be using subject-specific growth trajectories (i.e. weighting individuals with slowest growth).}
+
+\item{observed}{observed growth values (e.g. height or weight)}
+
+\item{predicted}{predicted values from models fitted to observed data}
 }
 \value{
 None

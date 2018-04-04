@@ -1,6 +1,6 @@
 #' aMSE
 #'
-#' Function for calculating age-stratified mean squared error
+#' Function for calculating age-stratified subject-specific mean squared error
 #'
 #' @param observed observed growth values (e.g. height or weight)
 #' @param predicted predicted values from models fitted to observed data

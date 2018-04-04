@@ -22,5 +22,5 @@ amse(observed = "observed", predicted = "pred", id.var = "id",
 None
 }
 \description{
-Function for calculating age-stratified mean squared error
+Function for calculating age-stratified subject-specific mean squared error
 }

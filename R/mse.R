@@ -2,14 +2,14 @@
 #'
 #' Function for calculating subject-specific mean squared error
 #'
-#' @param method2order method to order colors (\code{"hsv"} or \code{"cluster"})
-#' @param cex character expansion for the text
-#' @param mar margin paramaters; vector of length 4 (see \code{\link[graphics]{par}})
+#' @param observed observed growth values (e.g. height or weight)
+#' @param predicted predicted values from models fitted to observed data
+#' @param id.var variable that identifies individual subjects
 #'
 #' @return None
 #'
 #' @export
-mse = function (observed="height", id.var="id", predicted="pred", time.var="time", data){
+mse = function (observed="observed", id.var="id", predicted="pred", time.var="time", data){
 
   id<-unique(data[[id.var]])
   data$t<-data[[time.var]]
@@ -20,7 +20,7 @@ mse = function (observed="height", id.var="id", predicted="pred", time.var="time
     for (k in id){
       count=count+1
       current.mat=subset(data,id==k)
-      mse= mean((current.mat$true-current.mat$pred)^2)
+      mse= mean((current.mat[[observed]]-current.mat[[predicted]])^2)
       mse.list[count]=mse
     }
 

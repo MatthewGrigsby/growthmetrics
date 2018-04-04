@@ -2,9 +2,10 @@
 #'
 #' Function for calculating subject-specific location-normalized mean squared error
 #'
-#' @param method2order method to order colors (\code{"hsv"} or \code{"cluster"})
-#' @param cex character expansion for the text
-#' @param mar margin paramaters; vector of length 4 (see \code{\link[graphics]{par}})
+#' @param observed observed growth values (e.g. height or weight)
+#' @param predicted predicted values from models fitted to observed data
+#' @param id.var variable that identifies individual subjects
+#' @param time.var time variable (e.g. age) used when calculating nMSE and wMSE
 #'
 #' @return None
 #'

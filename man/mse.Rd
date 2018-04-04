@@ -4,15 +4,15 @@
 \alias{mse}
 \title{MSE}
 \usage{
-mse(observed = "height", id.var = "id", predicted = "pred",
+mse(observed = "observed", id.var = "id", predicted = "pred",
   time.var = "time", data)
 }
 \arguments{
-\item{method2order}{method to order colors (\code{"hsv"} or \code{"cluster"})}
+\item{observed}{observed growth values (e.g. height or weight)}
 
-\item{cex}{character expansion for the text}
+\item{id.var}{variable that identifies individual subjects}
 
-\item{mar}{margin paramaters; vector of length 4 (see \code{\link[graphics]{par}})}
+\item{predicted}{predicted values from models fitted to observed data}
 }
 \value{
 None
