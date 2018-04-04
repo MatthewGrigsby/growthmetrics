@@ -14,9 +14,12 @@ amse(observed = "observed", predicted = "pred", id.var = "id",
 
 \item{id.var}{variable that identifies individual subjects}
 
-\item{time.var}{time variable (e.g. age) used when calculating nMSE and wMSE}
+\item{time.var}{time variable (e.g. age) used when calculating nMSE and wMSE (default is in months)}
 
-\item{breaks}{vector indicating location of age cutoffs for calculating MSE per group}
+\item{breaks}{vector indicating location of age cutoffs for calculating MSE per group (default is in months)}
+}
+\value{
+None
 }
 \description{
 Function for calculating age-stratified subject-specific mean squared error
