@@ -18,9 +18,6 @@ amse(observed = "observed", predicted = "pred", id.var = "id",
 
 \item{breaks}{vector indicating location of age cutoffs for calculating MSE per group}
 }
-\value{
-None
-}
 \description{
 Function for calculating age-stratified subject-specific mean squared error
 }

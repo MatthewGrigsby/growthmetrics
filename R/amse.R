@@ -8,7 +8,7 @@
 #' @param time.var time variable (e.g. age) used when calculating nMSE and wMSE
 #' @param breaks vector indicating location of age cutoffs for calculating MSE per group
 #'
-#' @return None
+#'
 #'
 #' @import dplyr reshape
 #'
