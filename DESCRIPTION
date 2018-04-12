@@ -8,4 +8,4 @@ Description: Metrics for comparing both nested and non-nested growth models. Eac
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 6.0.1 
