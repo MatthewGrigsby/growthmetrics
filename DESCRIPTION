@@ -1,6 +1,6 @@
-Package: growthmetrics
+Package: statmedtools
 Type: Package
-Title: Metrics for Growth Model Comparisons
+Title: Tools for applying statistic modelling and comparison techniques developed by researchers at Johns Hopkins University Center for Global NCD Research and Training
 Version: 0.1.0
 Author: Matthew R Grigsby, Junrui Di, Andrew Leroux, Vadim Zipunnikov, Luo Xiao, Ciprian Crainiceanu and William Checkley
 Maintainer: Matthew Grigsby <mgrigsby@jhu.edu>
