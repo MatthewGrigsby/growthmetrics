@@ -4,14 +4,14 @@
 \alias{dlm}
 \title{DLM}
 \usage{
-dlm(data, months = c(0:15), hist.lngth = 7)
+dlm(data = HAZ, time = 0:15, hist.lgth = 7)
 }
 \arguments{
 \item{data}{A matrix of values with each row representing an individual and each column representing measurements at each time point (e.g. column 1 is time point 1, etc.). Measurements are assumed to be taken at the same time intervals for every participant.}
 
-\item{hist.lngth}{The length of known history for the observed process. We use leave one-curve out cross validation for prediction.}
+\item{time}{A vector of times. This equal the number of columts in the matrix provided (0 through 15 months for the example dataset).}
 
-\item{time}{A vector of times. This equal the number of columts in the matrix provided (e.g. 0 through 15 months for the example dataset)}
+\item{hist.lngth}{The length of known history for the observed process. We use leave one-curve out cross validation for prediction (hist.lgth is 7 for the example dataset).}
 }
 \value{
 A matrix of predictions with rows representing each individual and columts representing predictions for each time point.
