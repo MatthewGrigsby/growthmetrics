@@ -2,10 +2,10 @@ Package: statmedtools
 Type: Package
 Title: Tools for applying statistic modelling and comparison techniques developed by researchers at Johns Hopkins University Center for Global NCD Research and Training
 Version: 0.1.0
-Author: Matthew R Grigsby, Junrui Di, Andrew Leroux, Vadim Zipunnikov, Luo Xiao, Ciprian Crainiceanu and William Checkley
+Author: Matthew R Grigsby, Andrada E. Ivanescu, Junrui Di, Andrew Leroux, Vadim Zipunnikov, Luo Xiao, Ciprian Crainiceanu, William Checkley
 Maintainer: Matthew Grigsby <mgrigsby@jhu.edu>
 Description: Metrics for comparing both nested and non-nested growth models. Each metric is a transformation of the mean squared error (MSE). The normalized MSE (nMSE) is normalized to location of growth measure, age-adjusted MSE (aMSE) calculates subject-specic MSE estimates by age groups, and the weighted MSE (wMSE) calculates subject specific estimates that are weighted by a variable of particular interest.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.0.1 
+RoxygenNote: 6.0.1
