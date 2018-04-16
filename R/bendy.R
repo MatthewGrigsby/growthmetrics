@@ -20,17 +20,15 @@
 #'
 #'
 #' @export
-bendy <- function(data, time=c(0:15), hist.lngth=7){
+bendy <- function(data, time, hist.lgth){
 
   Y=as.matrix(data)
   n=nrow(Y)
-  time=months
-  hist.lgth<-hist.lngth
-  Y.predict.BENDY<-matrix(nrow=n,ncol=length(month)-hist.lgth)
+  Y.predict.BENDY<-matrix(nrow=n,ncol=length(time)-hist.lgth)
 
   #BENDY
   for(i in 1:n){
-    for(j in 1:(length(month)-hist.lgth)){
+    for(j in 1:(length(time)-hist.lgth)){
       data.BENDY<-data.frame(Y[-i,hist.lgth+j], Y[-i,1],Y[-i,hist.lgth])
       names(data.BENDY)<-c("y.BENDY",paste("y",c(1,hist.lgth),sep=""))
       fit.BENDY<-lm(y.BENDY~., data=data.BENDY)
