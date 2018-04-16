@@ -4,7 +4,7 @@
 \alias{bendy}
 \title{BENDY}
 \usage{
-bendy(data, time = c(0:15), hist.lngth = 7)
+bendy(data, time, hist.lgth)
 }
 \arguments{
 \item{data}{A matrix of values with each row representing an individual and each column representing measurements at each time point (e.g. column 1 is time point 1, etc.). Measurements are assumed to be taken at the same time intervals for every participant.}
